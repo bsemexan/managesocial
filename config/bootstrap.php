@@ -212,8 +212,7 @@ Type::build('timestamp')
  */
  
  Plugin::load('Migrations'); //Loads a single plugin named Migrations
- Plugin::load('DebugKit', ['autoload' => true]);
- Plugin::load('DebugKit', ['bootstrap' => true]);
+ Plugin::load('DebugKit', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
  Plugin::loadAll(); // Loads all plugins at once
 
 /*
