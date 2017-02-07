@@ -7,7 +7,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Busines'), ['action' => 'edit', $busines->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Busines'), ['action' => 'delete', $busines->id], ['confirm' => __('Are you sure you want to delete {0}?', $busines->name)]) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Busines'), ['action' => 'delete', $busines->id], ['confirm' => __('Are you sure you want to delete # {0}?', $busines->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Business'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Busines'), ['action' => 'add']) ?> </li>
     </ul>

@@ -16,11 +16,7 @@ class ContentControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.content',
-        'app.post',
-        'app.post_content',
-        'app.feedback',
-        'app.post_feedback'
+        'app.content'
     ];
 
     /**

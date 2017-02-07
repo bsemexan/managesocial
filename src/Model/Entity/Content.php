@@ -8,8 +8,6 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $type
- *
- * @property \App\Model\Entity\Post[] $post
  */
 class Content extends Entity
 {

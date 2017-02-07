@@ -16,11 +16,7 @@ class FeedbackControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.feedback',
-        'app.post',
-        'app.content',
-        'app.post_content',
-        'app.post_feedback'
+        'app.feedback'
     ];
 
     /**

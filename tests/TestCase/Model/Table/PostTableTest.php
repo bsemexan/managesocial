@@ -24,11 +24,7 @@ class PostTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.post',
-        'app.content',
-        'app.post_content',
-        'app.feedback',
-        'app.post_feedback'
+        'app.post'
     ];
 
     /**

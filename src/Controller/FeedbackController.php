@@ -34,7 +34,7 @@ class FeedbackController extends AppController
     public function view($id = null)
     {
         $feedback = $this->Feedback->get($id, [
-            'contain' => ['Post']
+            'contain' => []
         ]);
 
         $this->set('feedback', $feedback);
@@ -58,8 +58,7 @@ class FeedbackController extends AppController
             }
             $this->Flash->error(__('The feedback could not be saved. Please, try again.'));
         }
-        $post = $this->Feedback->Post->find('list', ['limit' => 200]);
-        $this->set(compact('feedback', 'post'));
+        $this->set(compact('feedback'));
         $this->set('_serialize', ['feedback']);
     }
 
@@ -73,7 +72,7 @@ class FeedbackController extends AppController
     public function edit($id = null)
     {
         $feedback = $this->Feedback->get($id, [
-            'contain' => ['Post']
+            'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $feedback = $this->Feedback->patchEntity($feedback, $this->request->data);
@@ -84,8 +83,7 @@ class FeedbackController extends AppController
             }
             $this->Flash->error(__('The feedback could not be saved. Please, try again.'));
         }
-        $post = $this->Feedback->Post->find('list', ['limit' => 200]);
-        $this->set(compact('feedback', 'post'));
+        $this->set(compact('feedback'));
         $this->set('_serialize', ['feedback']);
     }
 

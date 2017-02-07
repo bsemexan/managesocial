@@ -6,12 +6,8 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Home Page'), ['controller' => 'Pages','action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Home Page'), ['controller' =>'Pages','action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Post'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Content'), ['controller' => 'Content', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Content'), ['controller' => 'Content', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Feedback'), ['controller' => 'Feedback', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Feedback'), ['controller' => 'Feedback', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="post index large-9 medium-8 columns content">

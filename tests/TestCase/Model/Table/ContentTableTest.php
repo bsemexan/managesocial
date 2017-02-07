@@ -24,11 +24,7 @@ class ContentTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.content',
-        'app.post',
-        'app.post_content',
-        'app.feedback',
-        'app.post_feedback'
+        'app.content'
     ];
 
     /**

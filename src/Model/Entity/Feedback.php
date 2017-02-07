@@ -8,8 +8,6 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
- *
- * @property \App\Model\Entity\Post[] $post
  */
 class Feedback extends Entity
 {

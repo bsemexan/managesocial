@@ -34,7 +34,7 @@ class ContentController extends AppController
     public function view($id = null)
     {
         $content = $this->Content->get($id, [
-            'contain' => ['Post']
+            'contain' => []
         ]);
 
         $this->set('content', $content);
@@ -58,8 +58,7 @@ class ContentController extends AppController
             }
             $this->Flash->error(__('The content could not be saved. Please, try again.'));
         }
-        $post = $this->Content->Post->find('list', ['limit' => 200]);
-        $this->set(compact('content', 'post'));
+        $this->set(compact('content'));
         $this->set('_serialize', ['content']);
     }
 
@@ -73,7 +72,7 @@ class ContentController extends AppController
     public function edit($id = null)
     {
         $content = $this->Content->get($id, [
-            'contain' => ['Post']
+            'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $content = $this->Content->patchEntity($content, $this->request->data);
@@ -84,8 +83,7 @@ class ContentController extends AppController
             }
             $this->Flash->error(__('The content could not be saved. Please, try again.'));
         }
-        $post = $this->Content->Post->find('list', ['limit' => 200]);
-        $this->set(compact('content', 'post'));
+        $this->set(compact('content'));
         $this->set('_serialize', ['content']);
     }
 

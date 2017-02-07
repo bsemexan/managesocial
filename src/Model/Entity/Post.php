@@ -10,9 +10,6 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $time_posted
  * @property int $character_length
  * @property int $business
- *
- * @property \App\Model\Entity\Content[] $content
- * @property \App\Model\Entity\Feedback[] $feedback
  */
 class Post extends Entity
 {

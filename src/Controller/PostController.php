@@ -34,7 +34,7 @@ class PostController extends AppController
     public function view($id = null)
     {
         $post = $this->Post->get($id, [
-            'contain' => ['Content', 'Feedback']
+            'contain' => []
         ]);
 
         $this->set('post', $post);
@@ -58,9 +58,7 @@ class PostController extends AppController
             }
             $this->Flash->error(__('The post could not be saved. Please, try again.'));
         }
-        $content = $this->Post->Content->find('list', ['limit' => 200]);
-        $feedback = $this->Post->Feedback->find('list', ['limit' => 200]);
-        $this->set(compact('post', 'content', 'feedback'));
+        $this->set(compact('post'));
         $this->set('_serialize', ['post']);
     }
 
@@ -74,7 +72,7 @@ class PostController extends AppController
     public function edit($id = null)
     {
         $post = $this->Post->get($id, [
-            'contain' => ['Content', 'Feedback']
+            'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $post = $this->Post->patchEntity($post, $this->request->data);
@@ -85,9 +83,7 @@ class PostController extends AppController
             }
             $this->Flash->error(__('The post could not be saved. Please, try again.'));
         }
-        $content = $this->Post->Content->find('list', ['limit' => 200]);
-        $feedback = $this->Post->Feedback->find('list', ['limit' => 200]);
-        $this->set(compact('post', 'content', 'feedback'));
+        $this->set(compact('post'));
         $this->set('_serialize', ['post']);
     }
 

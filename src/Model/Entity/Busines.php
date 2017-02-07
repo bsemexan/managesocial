@@ -24,7 +24,7 @@ class Busines extends Entity
      * @var array
      */
     protected $_accessible = [
-        '*' => false,
-        'id' => true
+        '*' => true,
+        'id' => false
     ];
 }
