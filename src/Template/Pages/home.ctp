@@ -18,8 +18,8 @@
     </ul>
     <ul class="side-nav">
         <li class="heading"><?= __('Content') ?></li>
-        <li><?= $this->Html->link(__('New Content'), ['controller => Content','action' => 'add']) ?></li>
-       <li><?= $this->Html->link(__('List Content'), ['controller' => 'Content', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Content'), ['controller' => 'Content', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Content'), ['controller' => 'Content', 'action' => 'index']) ?></li>
     </ul>
     <ul class="side-nav">
         <li class="heading"><?= __('Feedback') ?></li>
